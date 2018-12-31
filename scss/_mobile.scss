@@ -1,9 +1,15 @@
 //Widescreen
 @include media_xl {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 //Desktops or laptops
 @include media_lg {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 //Tablets and small laptops
@@ -55,11 +61,19 @@
       "job3";
     grid-template-columns: 1fr;
   }
+
+  .projects {
+    grid-auto-columns: repeat(2, 1fr);
+  }
 }
 
 //smartphones
 @include media_sm {
   main#home h1 {
     margin-top: 10vh;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
   }
 }
